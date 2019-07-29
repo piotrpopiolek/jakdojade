@@ -1,0 +1,28 @@
+<app-map
+  *ngIf="showMap"
+  [lat]="latitude"
+  [lng]="longitude"
+  [zoom]="18"
+  [label]="name"
+></app-map>
+<div (click)="handleMap()" class="container">
+  <div class="row">
+    <h1 class="title">{{ index }} {{ name }}</h1>
+  </div>
+  <div class="row">
+    <div class="col"><img src="../../assets/bike.png" /></div>
+    <div class="col"><img src="../../assets/padlock.png" /></div>
+  </div>
+  <div class="row">
+    <div class="col">Available bikes</div>
+    <div class="col">Available places</div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <span class="freeBikes">{{ freeBikes }}</span>
+    </div>
+    <div class="col">
+      <span class="freeRacks">{{ freeRacks }}</span>
+    </div>
+  </div>
+</div>

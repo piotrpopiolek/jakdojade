@@ -1,0 +1,19 @@
+<agm-map
+  [zoom]="zoom"
+  [latitude]="lat"
+  [longitude]="lng"
+  [zoomControl]="false"
+  [disableDefaultUI]="false"
+>
+  <agm-marker
+    [latitude]="lat"
+    [longitude]="lng"
+    [label]="label"
+    [iconUrl]="iconUrl"
+  >
+    <agm-info-window #window>
+      <h6>Longitude: {{ lat }}</h6>
+      <h6>Latitude: {{ lng }}</h6>
+    </agm-info-window></agm-marker
+  >
+</agm-map>
